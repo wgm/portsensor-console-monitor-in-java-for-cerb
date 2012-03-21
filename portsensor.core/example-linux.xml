@@ -1,0 +1,56 @@
+<configuration>
+	<settings>
+		<post_url>http://example.com/cerb5/rest/sensors/bulk_update.xml</post_url>
+		<username>api@example.com</username>
+		<secret_key>password</secret_key>
+	</settings>
+
+	<!-- 
+	<sensor>
+		<name>HTTP</name>
+		<command>#PORT google.com 80</command>
+		<type>string</type>
+		<critical oper="eq" value="DOWN">Critical</critical>
+	</sensor>
+	<sensor>
+		<name>Disk Used (/)</name>
+		<command>#DF /</command>
+		<type>percent</type>
+		<warning oper="gt" value="80">Low Disk</warning>
+		<critical oper="gt" value="90">Critical Disk</critical>
+	</sensor>
+	<sensor>
+		<name>Load</name>
+		<command>#LOAD</command>
+		<type>decimal</type>
+		<warning oper="gt" value="5.0">Moderate Load</warning>
+		<critical oper="gt" value="15.0">High Load</critical>
+	</sensor>
+	<sensor>
+		<name>Who's Online</name>
+		<command>#WHO</command>
+		<type>text</type>
+	</sensor>
+	<sensor>
+		<name>Top Processes (Mem)</name>
+		<command>#PS mem</command>
+		<type>text</type>
+	</sensor>
+	<sensor>
+		<name>Top Processes (CPU)</name>
+		<command>#PS cpu</command>
+		<type>text</type>
+	</sensor>
+	<sensor>
+		<name>Top Processes (Time)</name>
+		<command>#PS time</command>
+		<type>text</type>
+	</sensor>
+	</sensor>
+	<sensor>
+		<name>Ping</name>
+		<command>ping -c 1 corporate.webgroupmedia.com | tail -n 1 | awk -F"/" '{print $6"ms"}'</command>
+		<type>number</type>
+	</sensor>
+	-->
+</configuration>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.portsensor.main.Main
+Class-Path: libs/jdom.jar libs/sigar/sigar.jar
+
