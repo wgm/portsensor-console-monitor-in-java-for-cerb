@@ -6,48 +6,47 @@
 	</settings>
 
 	<!-- 
-	<sensor>
+	<sensor id="local_http">
 		<name>HTTP</name>
 		<command>#PORT google.com 80</command>
 		<type>string</type>
 		<critical oper="eq" value="DOWN">Critical</critical>
 	</sensor>
-	<sensor>
+	<sensor id="local_disk">
 		<name>Disk Used (/)</name>
 		<command>#DF /</command>
 		<type>percent</type>
 		<warning oper="gt" value="80">Low Disk</warning>
 		<critical oper="gt" value="90">Critical Disk</critical>
 	</sensor>
-	<sensor>
+	<sensor id="local_load">
 		<name>Load</name>
 		<command>#LOAD</command>
 		<type>decimal</type>
 		<warning oper="gt" value="5.0">Moderate Load</warning>
 		<critical oper="gt" value="15.0">High Load</critical>
 	</sensor>
-	<sensor>
+	<sensor id="local_who">
 		<name>Who's Online</name>
 		<command>#WHO</command>
 		<type>text</type>
 	</sensor>
-	<sensor>
+	<sensor id="local_ps_mem">
 		<name>Top Processes (Mem)</name>
 		<command>#PS mem</command>
 		<type>text</type>
 	</sensor>
-	<sensor>
+	<sensor id="local_ps_cpu">
 		<name>Top Processes (CPU)</name>
 		<command>#PS cpu</command>
 		<type>text</type>
 	</sensor>
-	<sensor>
+	<sensor id="local_ps_time">
 		<name>Top Processes (Time)</name>
 		<command>#PS time</command>
 		<type>text</type>
 	</sensor>
-	</sensor>
-	<sensor>
+	<sensor id="local_ping">
 		<name>Ping</name>
 		<command>ping -c 1 corporate.webgroupmedia.com | tail -n 1 | awk -F"/" '{print $6"ms"}'</command>
 		<type>number</type>
