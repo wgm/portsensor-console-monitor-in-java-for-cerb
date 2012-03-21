@@ -271,7 +271,12 @@ public class Main {
 				if(sensor.getType().equals(ConsoleSensor.TYPE_NUMBER)) {
 					sSensorOut = String.valueOf(DecimalFormat.getNumberInstance().parse(sSensorOut).longValue());
 				} else if(sensor.getType().equals(ConsoleSensor.TYPE_PERCENT)) {
-					sSensorOut = String.valueOf(Math.round(100*DecimalFormat.getNumberInstance().parse(sSensorOut).doubleValue())) + "%";
+					if(sSensorOut.endsWith("%")) {
+					} else {
+						double percent = DecimalFormat.getNumberInstance().parse(sSensorOut).doubleValue();
+						sSensorOut = String.valueOf(Math.round(100*percent)) + "%";
+					}
+					
 				} else if (sensor.getType().equals(ConsoleSensor.TYPE_DECIMAL)) {
 					sSensorOut = String.valueOf(DecimalFormat.getNumberInstance().parse(sSensorOut).doubleValue());
 				} else if (sensor.getType().equals(ConsoleSensor.TYPE_UPDOWN)) {
