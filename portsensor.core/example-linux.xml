@@ -1,8 +1,8 @@
 <configuration>
 	<settings>
 		<post_url>http://example.com/cerb5/rest/sensors/bulk_update.xml</post_url>
-		<username>api@example.com</username>
-		<secret_key>password</secret_key>
+		<username>access_key</username>
+		<secret_key>secret_key</secret_key>
 	</settings>
 
 	<!-- 
