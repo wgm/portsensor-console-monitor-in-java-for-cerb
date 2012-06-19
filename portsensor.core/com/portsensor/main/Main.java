@@ -302,16 +302,14 @@ public class Main {
 				sOut = "Sensor result was not a valid "+sensor.getType();
 			}
 			
-			if(0 != sSensorOut.length()) {
-				Element e = new Element("sensor");
-				e.setAttribute("id", sensor.getId());
-				e.addContent(new Element("name").setText(sensor.getName()));
-				e.addContent(new Element("status").setText(String.valueOf(cStatus)));
-				e.addContent(new Element("metric").setText(sSensorOut));
-				e.addContent(new Element("metric_type").setText(sensor.getType()));
-				e.addContent(new Element("output").setText(sOut));
-				eRoot.addContent(e);
-			}
+			Element e = new Element("sensor");
+			e.setAttribute("id", sensor.getId());
+			e.addContent(new Element("name").setText(sensor.getName()));
+			e.addContent(new Element("status").setText(String.valueOf(cStatus)));
+			e.addContent(new Element("metric").setText(sSensorOut));
+			e.addContent(new Element("metric_type").setText(sensor.getType()));
+			e.addContent(new Element("output").setText(sOut));
+			eRoot.addContent(e);
 		}
 
 	    XMLOutputter outputter = new XMLOutputter();
